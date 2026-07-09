@@ -9,9 +9,7 @@ st.title("📄 Self-Hosted Document Extraction Engine API")
 st.write("Upload any document (PDF, DOCX, XLSX, PPTX) to extract layout,content clean Markdown.")
 st.write("Created by DeepCode")
 
-# Initialize the cloud client
-# Replace with your actual Hugging Face username and Space name
-# Initialize the cloud client with authentication
+
 HF_API_URL = "kyakaruiska/Extraction_API" 
 
 # Replace the string below with your actual token

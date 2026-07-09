@@ -2,16 +2,15 @@
 import streamlit as st
 import requests
 
-# 1. Page Configuration (Must be the very first Streamlit command)
+
 st.set_page_config(page_title="Self-Hosted Document Extraction API v1", layout="wide")
 
 st.title("📄 Self-Hosted Document Extraction Engine API")
 st.write("Upload any document (PDF, DOCX, XLSX, PPTX) to extract layout,content clean Markdown.")
 st.write("Created by DeepCode")
 
-# 2. Network Endpoint Definition
+
 # When running locally, this hits your machine's localhost. 
-# (When we move to Docker Compose later, this will change to http://backend:8000/extract)
 BACKEND_URL = "http://127.0.0.1:8000/extract"
 
 # 3. File Upload Widget
@@ -20,7 +19,7 @@ uploaded_file = st.file_uploader(
     type=["pdf", "docx", "xlsx", "pptx", "txt", "html"]
 )
 
-# 4. Processing Action Trigger
+
 if uploaded_file is not None:
     if st.button("Extract Content"):
         with st.spinner("Processing document through extraction pipelines..."):

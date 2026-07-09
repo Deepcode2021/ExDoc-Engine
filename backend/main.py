@@ -18,12 +18,12 @@ app = FastAPI(
 docling_converter = DocumentConverter()
 
 # FOR THE IMAGE EXTRACTION ||||||
-# 1. Configure the pipeline to actively render and retain image figures
+
 pipeline_options = PdfPipelineOptions()
 pipeline_options.generate_picture_images = True  # Capture images/diagrams
 pipeline_options.images_scale = 2.0             # High resolution scale multiplier
 pipeline_options.do_picture_description = True # Turn on automatic visual asset descriptions
-# 2. Bind these options explicitly to the PDF input format
+
 format_options = {
     InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
 }
@@ -102,7 +102,7 @@ async def extract_chunks(file: UploadFile = File(...)):
         # Dynamically loop through layout structures and assemble context-aware chunks
         chunks = []
         for c in chunker.chunk(result.document):
-            # Fallback to general title if explicit heading structural hierarchy isn't met
+            
             heading_title = "General Context"
             if c.heading and len(c.heading) > 0:
                 heading_title = " > ".join(c.heading) # Creates path format like "Section 1 > Subsection A"
