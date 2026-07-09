@@ -23,5 +23,5 @@ To run the interactive extraction dashboard on your local machine:
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/yourusername/universal-extractor.git](https://github.com/yourusername/universal-extractor.git)
-cd universal-extractor
+git clone [https://github.com/Deepcode2021/ExDoc-Engine.git](https://github.com/Deepcode2021/ExDoc-Engine.git)
+cd Exdoc-Engine
